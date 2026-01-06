@@ -1,0 +1,86 @@
+import { FundData, Period } from './types';
+
+export const PERIOD_LABELS: Record<Period, string> = {
+  [Period.ThreeMonths]: '近三個月',
+  [Period.SixMonths]: '近半年',
+  [Period.OneYear]: '近一年',
+  [Period.ThreeYears]: '近三年',
+  [Period.FiveYears]: '近五年',
+  [Period.TenYears]: '近十年',
+};
+
+// Mock Data mimicking popular Taiwan Funds (Real data would require an API proxy)
+export const MOCK_FUNDS: FundData[] = [
+  {
+    id: '1',
+    name: '安聯台灣科技基金',
+    ticker: 'A09012',
+    nav: 185.42,
+    updateDate: '2023-10-27',
+    riskLevel: 'RR5',
+    currency: 'TWD',
+    performance: {
+      [Period.ThreeMonths]: 12.5,
+      [Period.SixMonths]: 28.4,
+      [Period.OneYear]: 65.2,
+      [Period.ThreeYears]: 145.8,
+      [Period.FiveYears]: 280.5,
+      [Period.TenYears]: 520.1,
+    },
+    tags: ['科技', '高波動', '熱門'],
+  },
+  {
+    id: '2',
+    name: '統一黑馬基金',
+    ticker: 'A36004',
+    nav: 210.15,
+    updateDate: '2023-10-27',
+    riskLevel: 'RR5',
+    currency: 'TWD',
+    performance: {
+      [Period.ThreeMonths]: 8.2,
+      [Period.SixMonths]: 22.1,
+      [Period.OneYear]: 58.9,
+      [Period.ThreeYears]: 120.4,
+      [Period.FiveYears]: 240.2,
+      [Period.TenYears]: 480.5,
+    },
+    tags: ['中小型', '爆發力'],
+  },
+  {
+    id: '3',
+    name: '野村優質基金',
+    ticker: 'A1iL51e',
+    nav: 98.66,
+    updateDate: '2023-10-27',
+    riskLevel: 'RR4',
+    currency: 'TWD',
+    performance: {
+      [Period.ThreeMonths]: 5.5,
+      [Period.SixMonths]: 15.3,
+      [Period.OneYear]: 42.1,
+      [Period.ThreeYears]: 85.6,
+      [Period.FiveYears]: 150.3,
+      [Period.TenYears]: 310.2,
+    },
+    tags: ['穩健', '大型股'],
+  },
+  {
+    id: '4',
+    name: '元大台灣高股息優質龍頭基金',
+    ticker: 'A32002',
+    nav: 15.23,
+    updateDate: '2023-10-27',
+    riskLevel: 'RR4',
+    currency: 'TWD',
+    performance: {
+      [Period.ThreeMonths]: 3.2,
+      [Period.SixMonths]: 8.5,
+      [Period.OneYear]: 25.4,
+      [Period.ThreeYears]: 45.2,
+      [Period.FiveYears]: 78.5,
+      [Period.TenYears]: 120.4,
+    },
+    tags: ['配息', '龍頭'],
+  },
+];
